@@ -1,0 +1,158 @@
+
+/* Contenedor principal */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Tarjeta principal */
+main {
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Titulo principal */
+h1 {
+  color: #3858a6;
+  margin-bottom: 15px;
+}
+
+/* Descripcion */
+p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+/* Campo de texto */
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Botones */
+button {
+  padding: 12px 18px;
+  background-color: #3858a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #294482;
+}
+
+/* Titulo de tareas */
+h2 {
+  color: #243047;
+  margin-top: 30px;
+}
+
+/* Contador de tareas */
+.contador {
+  color: #3858a6;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* Lista de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+/* Cada tarea */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Texto de cada tarea */
+li span {
+  overflow-wrap: anywhere;
+}
+
+/* Boton eliminar tareas */
+li button {
+  background-color: #dc3545;
+  flex-shrink: 0;
+}
+
+li button:hover {
+  background-color: #b02a37;
+}
+
+/* Diseño adaptable Para celulares */
+@media (max-width: 700px) {
+  main {
+    margin: 20px 15px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  li button {
+    width: auto;
+  }
+}
+/* Incorporación de logo institucional en la esquina superior izquierda */
+main {
+  position: relative;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  width: 100px;
+  height: 65px;
+
+  background-image: url('/logo-ipg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  pointer-events: none;
+}
+/* Espacio para evitar que el logo cubra el título */
+main {
+  padding-top: 100px;
+}
+
